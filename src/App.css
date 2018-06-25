@@ -1,0 +1,39 @@
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 3em;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #1890ff;
+  font-size: large;
+}
+
+
+.App-title {
+  color: #fff;
+}
+
+.search {
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+.search-bar {
+  margin: 0 auto;
+  padding:2em;
+}
+
+.search-results {
+  padding:2em;
+}
+
+.desc-icon {
+  padding-right:1em;
+}
+
+.ant-collapse-header {
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-weight: 500;
+}
