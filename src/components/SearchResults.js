@@ -30,9 +30,9 @@ export default class SearchResults extends Component {
 
     return (
       <div>
-        <NewResults fetchResults={this.props.fetchResults} />
+        <NewResults fetchResults={this.props.fetchResults} offset={this.props.offset} />
         <div>{books}</div>
-        <NewResults fetchResults={this.props.fetchResults} />
+        <NewResults fetchResults={this.props.fetchResults} offset={this.props.offset} />
       </div>
     )
   }

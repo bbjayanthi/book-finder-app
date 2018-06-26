@@ -44,5 +44,11 @@
 .pagination {
   padding: 1em;
   margin: 0 auto;
-  max-width: 15em
+  max-width: 20em;
+}
+
+.pagination-label {
+  padding-left: 1em;
+  padding-right: 1em;  
+  font-style: italic;
 }
