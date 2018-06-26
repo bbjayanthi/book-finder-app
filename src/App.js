@@ -37,7 +37,9 @@ class App extends Component {
 
   handleSearch = (value) => {
     this.setState({searchValue : value}, function() {
+      const startTime = (new Date()).getTime()
       googleBooks.search(value, this.state.options, (error, results) => {
+        this.setState({responseTime : ((new Date()).getTime() - startTime)/1000 })
         if(! error) {
           this.setState({searchResults : results})
         } else {
@@ -58,6 +60,7 @@ class App extends Component {
             <SearchBar handleSearch={this.handleSearch.bind(this)} />
             {this.state.searchResults.length > 0 &&
               <div className="search-results">
+                <div className="response-time">Response Time: {this.state.responseTime} secs</div>
                 <SearchResults offset={this.state.options.offset} searchResults={this.state.searchResults} fetchResults={this.fetchResults.bind(this)} />
               </div>
             }
